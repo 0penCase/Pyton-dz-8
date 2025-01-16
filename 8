@@ -1,0 +1,12 @@
+def login(username, password):
+    correct_username = "admin"
+    correct_password = "1234"
+    assert username == correct_username and password == correct_password, "Невірне ім'я користувача або пароль"
+    print("Вхід виконано успішно")
+
+try:
+    user = input("Ім'я користувача: ")
+    pwd = input("Пароль: ")
+    login(user, pwd)
+except AssertionError as e:
+    print(e)
